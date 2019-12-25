@@ -13,6 +13,8 @@ PerlinNoise::PerlinNoise()
 
     std::shuffle(perm.begin(), perm.end(), rng);
 
+    // if you want to use a default vector just comment the above code and uncomment what's below
+
     // perm = {
     //     151,160,137,91,90,15,131,13,201,95,96,53,194,233,7,225,140,36,103,30,69,142,
     //     8,99,37,240,21,10,23,190, 6,148,247,120,234,75,0,26,197,62,94,252,219,203,117,
@@ -85,6 +87,7 @@ double PerlinNoise::noise(double x, double y, double z) {
                                          grad(perm[BA+1], x-1, y  , z-1)),
                                  lerp(u, grad(perm[AB+1], x  , y-1, z-1),
                                          grad(perm[BB+1], x-1, y-1, z-1))));
+                                         
     return (res + 1.0)/2.0;
 }
 

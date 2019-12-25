@@ -14,11 +14,11 @@ class PerlinNoise
 {
 public:
     PerlinNoise();
-    PerlinNoise(uint seed);
+    PerlinNoise(uint seed);     //in case you want to use a particular seed for our noise
     double noise(double x, double y, double z);
 
 private:
-    std::vector<int> perm;
+    std::vector<int> perm;      //permutation vector
     double fade(double t);
     double lerp(double t, double a, double b);
     double grad(int hash, double x, double y, double z);
