@@ -88,7 +88,7 @@ double PerlinNoise::noise(double x, double y, double z) {
                                  lerp(u, grad(perm[AB+1], x  , y-1, z-1),
                                          grad(perm[BB+1], x-1, y-1, z-1))));
                                          
-    return (res + 1.0)/2.0;
+    return (res + 1.)/2.;
 }
 
 }
