@@ -6,8 +6,8 @@ PerlinNoise::PerlinNoise()
 
     std::iota(perm.begin(), perm.end(), 0);
 
-    std::default_random_engine rd;
-    std::mt19937 rng(rd());
+    auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
+    std::mt19937 rng(seed);
 
     std::shuffle(perm.begin(), perm.end(), rng);
 
