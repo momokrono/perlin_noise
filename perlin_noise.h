@@ -7,8 +7,7 @@
 #include <algorithm>
 
 // c++11 adaptation of original perlin noise algorithm written by ken perlin in java. ref: https://cs.nyu.edu/~perlin/noise/
-
-namespace momo{
+// with some light changes from https://solarianprogrammer.com/2012/07/18/perlin-noise-cpp-11/
 
 class PerlinNoise
 {
@@ -23,7 +22,5 @@ private:
     double lerp(double t, double a, double b);
     double grad(int hash, double x, double y, double z);
 };
-
-}
 
 #endif

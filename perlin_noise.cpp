@@ -1,7 +1,5 @@
 #include "perlin_noise.h"
 
-namespace momo{
-
 PerlinNoise::PerlinNoise()
 {
     perm.resize(256);
@@ -89,6 +87,4 @@ double PerlinNoise::noise(double x, double y, double z) {
                                          grad(perm[BB+1], x-1, y-1, z-1))));
                                          
     return (res + 1.)/2.;
-}
-
 }
